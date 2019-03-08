@@ -39,7 +39,7 @@
 				<a href="bermudas.php">BERMUDAS</a>
 				<a href="calca.php">CALÇA</a>	
 				<a href="shorts.php">SHORTS</a>
-				<a href="cadastrar.php">CADASTRAR</a>
+				<a href="index.php">SAIR</a>
 			</nav>
                 <fieldset>
                     <legend>bem vindo,<?php echo $_SESSION['logado']."!";?></legend>

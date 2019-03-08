@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `endereco`
 --
 
-CREATE TABLE `endereco` (
+CREATE TABLE if NOT EXISTS `g4_endereco` (
   `cod_end` int(4) NOT NULL,
   `tipo_logradouro` varchar(20) NOT NULL,
   `logradouro` varchar(20) NOT NULL
@@ -36,7 +36,7 @@ CREATE TABLE `endereco` (
 -- Extraindo dados da tabela `endereco`
 --
 
-INSERT INTO `endereco` (`cod_end`, `tipo_logradouro`, `logradouro`) VALUES
+INSERT INTO `g4_endereco` (`cod_end`, `tipo_logradouro`, `logradouro`) VALUES
 (22, 'Rua', 'Bonsucess'),
 (23, 'teste', 'tst'),
 (24, 'as', 'asasasasa');
@@ -47,7 +47,7 @@ INSERT INTO `endereco` (`cod_end`, `tipo_logradouro`, `logradouro`) VALUES
 -- Estrutura da tabela `usuario`
 --
 
-CREATE TABLE `usuario` (
+CREATE TABLE if NOT EXISTS `g4_usuario` (
   `cod_cliente` int(4) NOT NULL,
   `login` varchar(20) NOT NULL,
   `senha` varchar(100) NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE `usuario` (
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`cod_cliente`, `login`, `senha`, `nome`, `sobrenome`, `cod_end`) VALUES
+INSERT INTO `g4_usuario` (`cod_cliente`, `login`, `senha`, `nome`, `sobrenome`, `cod_end`) VALUES
 (19, 'admin', 'admin', 'admisnssasas', 'adm', 22),
 (20, 'teste', '9517539999', 'Leonardo', 'Fabbio', 23),
 (21, 'as', 'as11111', 'as11', 'as11', 24);
@@ -72,14 +72,14 @@ INSERT INTO `usuario` (`cod_cliente`, `login`, `senha`, `nome`, `sobrenome`, `co
 --
 -- Indexes for table `endereco`
 --
-ALTER TABLE `endereco`
+ALTER TABLE `g4_endereco`
   ADD PRIMARY KEY (`cod_end`),
   ADD UNIQUE KEY `cod_end` (`cod_end`);
 
 --
 -- Indexes for table `usuario`
 --
-ALTER TABLE `usuario`
+ALTER TABLE `g4_usuario`
   ADD PRIMARY KEY (`cod_cliente`),
   ADD UNIQUE KEY `cod_cliente` (`cod_cliente`),
   ADD UNIQUE KEY `cod_end` (`cod_end`);
@@ -91,12 +91,12 @@ ALTER TABLE `usuario`
 --
 -- AUTO_INCREMENT for table `endereco`
 --
-ALTER TABLE `endereco`
+ALTER TABLE `g4_endereco`
   MODIFY `cod_end` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `usuario`
 --
-ALTER TABLE `usuario`
+ALTER TABLE `g4_usuario`
   MODIFY `cod_cliente` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- Constraints for dumped tables
@@ -105,8 +105,8 @@ ALTER TABLE `usuario`
 --
 -- Limitadores para a tabela `usuario`
 --
-ALTER TABLE `usuario`
-  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`cod_end`) REFERENCES `endereco` (`cod_end`);
+ALTER TABLE `g4_usuario`
+  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`cod_end`) REFERENCES `g4_endereco` (`cod_end`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
