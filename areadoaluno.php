@@ -1,8 +1,8 @@
-<!doctype html>
-<html lang="pt-br">
-    <?php
+ <?php
        session_start();
    ?>
+<html lang="pt-br">
+    
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -39,7 +39,7 @@
 				<a href="bermudas.php">BERMUDAS</a>
 				<a href="calca.php">CALÇA</a>	
 				<a href="shorts.php">SHORTS</a>
-				<a href="index.php">SAIR</a>
+				<a href="logout.php">SAIR</a>
 			</nav>
                 <fieldset>
                     <legend>bem vindo,<?php echo $_SESSION['logado']."!";?></legend>

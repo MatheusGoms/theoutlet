@@ -7,6 +7,11 @@
 	$html .= '<th>ID</th>';
 	$html .= '<th>Nome</th>';
 	$html .= '<th>Sobrenome</th>';
+        
+        $html .= '<th>CPF</th>';
+        $html .= '<th>Data de Nascimento</th>';
+        $html .= '<th>E-mail</th>';
+        $html .= '<th>Nome da Mãe</th>';
 	$html .= '<th>Logradouro</th>';
 	$html .= '<th>Tipo Logradouro</th>';
 	$html .= '</tr>';
@@ -21,6 +26,11 @@
 		$html .= '<tr><td>'.$row_usuario['cod_cliente'] . "</td>";
 		$html .= '<td>'.$row_usuario['nome'] . "</td>";
 		$html .= '<td>'.$row_usuario['sobrenome'] . "</td>";
+                
+                $html .= '<td>'.$row_usuario['cpf'] . "</td>";
+                $html .= '<td>'.$row_usuario['data_nascimento'] . "</td>";
+                $html .= '<td>'.$row_usuario['email'] . "</td>";
+                $html .= '<td>'.$row_usuario['nome_mae'] . "</td>";
 		$html .= '<td>'.$row_usuario['logradouro'] . "</td>";
                 $html .= '<td>'.$row_usuario['tipo_logradouro'] . "</td>"; "</td></tr>";		
 	}

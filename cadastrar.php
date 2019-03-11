@@ -80,8 +80,16 @@
 					                   
 					                    <label>Sobrenome</label>
                                                             <input type="text" name="sobrenome" id="sobrenome" required maxlength="100" class="form-control sobrenome">
-					                  
-                                                                   
+                                                             <label>RG</label>
+                                                             <input  type="number" name="rg" id="rg" required maxlength="9" class="form-control">
+                                                             <label>CPF</label>
+                                                             <input  value="999.999.999-99" name="cpf" id="cpf" required maxlength="11" class="form-control">
+                                                             <label>Data de Nascimento</label>
+                                                             <input  type="number" name="data_nascimento" id="data_nascimento" required maxlength="8" class="form-control">
+                                                             <label>E-mail</label>
+                                                            <input  type="email" name="email" id="email" required class="form-control">
+                                                             <label>Nome da Mãe</label>
+                                                            <input type="text" name="nome_mae" id="nome_mae" required class="form-control">      
 					                    <label>Tipo de Logradouro</label>
                                                             <input  type="tipo_logradouro" name="tipo_logradouro" id="tipo_logradouro" required class="form-control">
 					                   

@@ -5,6 +5,11 @@ if (isset($_POST["cadastrar"])) {
     $senha =$_POST["senha"];
     $nome =$_POST["nome"];
     $sobrenome =$_POST ["sobrenome"];
+    $rg =$_POST ["rg"];
+    $cpf =$_POST ["cpf"];
+    $datanascimento =$_POST ["data_nascimento"];
+    $email =$_POST ["email"];
+    $nomemae =$_POST ["nome_mae"];
     $tipo_logradouro =$_POST ["tipo_logradouro"];
     $logradouro =$_POST ["logradouro"];
      
@@ -13,8 +18,8 @@ if (isset($_POST["cadastrar"])) {
     $sqlcadendereco = "insert into endereco (cod_end, tipo_logradouro, logradouro)
             values(null, '".$tipo_logradouro."', '".$logradouro."')";  
     
-    $sqlcadusuario = "insert into usuario (login, senha, nome, sobrenome,cod_end) values
-            ('".$login."','".$senha."','".$nome."','".$sobrenome."', LAST_INSERT_ID())";
+    $sqlcadusuario = "insert into usuario (login, senha, nome, sobrenome,rg, cpf, data_nascimento, email, nome_mae, cod_end) values
+            ('".$login."','".$senha."','".$nome."','".$sobrenome."','".$rg."','".$cpf."','".$datanascimento."','".$email."','".$nomemae."', LAST_INSERT_ID())";
     
     if(mysqli_query($con, $sqlcadendereco)){
       if(mysqli_query($con, $sqlcadusuario)){
