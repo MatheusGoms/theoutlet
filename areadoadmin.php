@@ -45,14 +45,16 @@
                     <legend>bem vindo,<?php echo $_SESSION['logado']."!";?></legend>
                    
                 </fieldset>
-                    <form name="areadoaluno.php" method="POST" action="formcadprodutos.php">
+                    <form name="areadocliente.php" method="POST" action="formcadprodutos.php">
                     <a class="underlineHover" href="paineladm.php">Cadastrar Produtos</a>
                     <form name="areadoaluno.php" method="POST" action="paineladm.php">
-                    <a class="underlineHover" href="paineladm.php">Consultar Produtos</a> 
-                    <form name="areadoaluno.php" method="POST" action="consultaprod.php">
-                    <a class="underlineHover" href="paineladm.php">Editar Produtos</a> 
-                    <form name="areadoaluno.php" method="POST" action="paineladm.php">
-                    <a class="underlineHover" href="paineladm.php">Excluir Produtos</a> 
+                        <br>
+                    <a class="underlineHover" href="form_consultarprodutos.php">Consultar Produtos</a> 
+                    <form name="areadoaluno.php" method="POST" action="consultarprodutos.php">
+                        <br>
+                        <a class="underlineHover" href="gerarpdf.php">Gerar pdf inf_clientes</a> 
+                        <form name="areadocliente.php" method="POST" action="gerarpdf.php">
+                                       
                 </form>
 			</header>
 			

@@ -23,7 +23,7 @@ if(isset($_POST['acessar'])){
                   
                     $_SESSION['logado'] = $linha['login'];
                     //echo $_SESSION['logado'];
-                   header('Location: areadoaluno.php');
+                   header('Location: areadocliente.php');
                 }
                 }
 	

@@ -6,6 +6,7 @@ if (isset($_POST["cadastrar"])) {
     $tamanho =$_POST["tamanho_produto"];
     $tipoproduto =$_POST ["tipo_produto"];
     $codigoproduto = $_POST["codigo_produto"];
+    $situacao = "Em_estoque";
    
      
     include("conexao.php");
@@ -13,8 +14,8 @@ if (isset($_POST["cadastrar"])) {
     $sqlcategoria = "insert into categoria (cod_categoria, tipo_produto)
             values(null, '".$tipoproduto."')";  
     
-    $sqlproduto = "insert into produto (nome_produto, preco_produto, codigo_produto, tamanho_produto,cod_categoria) values
-            ('".$nome."','".$preco."','".$codigoproduto."','".$tamanho."', LAST_INSERT_ID())";
+    $sqlproduto = "insert into produto (nome_produto, preco_produto, codigo_produto, situacao, tamanho_produto,cod_categoria) values
+            ('".$nome."','".$preco."','".$codigoproduto."','".$situacao."','".$tamanho."',LAST_INSERT_ID())";
     
     if(mysqli_query($con, $sqlcategoria)){
       if(mysqli_query($con, $sqlproduto)){
@@ -27,4 +28,4 @@ if (isset($_POST["cadastrar"])) {
 ?>
 <br>
 <br>
-<a href='index.php?"'>Voltar</a>
+<a href='areadoadmin.php?"'>Voltar</a>

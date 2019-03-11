@@ -5,6 +5,8 @@
 	</head>
 
 	<body>
+            
+            
            
 <?php
 
@@ -15,6 +17,8 @@
     $sobrenome = $_POST['sobrenome'];
     $senha = $_POST ['senha'];
     $cod = $_POST['cod_cliente'];
+    
+    
 
     echo "Nome: ".$nome."</br>Sobrenome: ".$sobrenome." <br> Senha: ".$senha."</br></br>";
 
@@ -24,16 +28,17 @@
 
     if($ins)
     {
-    echo "<b style='color:green'>Usuário editado com sucesso!</b> </br><a href='areadoaluno.php'>Voltar</a>";
+    echo "<b style='color:green'>Usuário editado com sucesso!</b> </br><a href='areadocliente.php'>Voltar</a>";
 
     }
     else
     {
-    echo "Erro </br><a href='areadoaluno.php'>Voltar</a>";
+    echo "Erro </br><a href='areadocliente.php'>Voltar</a>";
 
     }
     
     
 ?>
+            
 	</body>
 </html>

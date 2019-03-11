@@ -1,5 +1,8 @@
 <!doctype html>
 <html lang="pt-br">
+    <?php
+       session_start();
+   ?>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -14,7 +17,7 @@
 	<script scr="js/modernizr.js" "></script>
 	<!-- modifica a escala do dispositivo-->
 	<meta name="viewport" content="initial-scale-1">
-	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link rel="icon" type="image/png" href=" ">
   </head>
   <body>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -26,48 +29,33 @@
 					<img src="img/logo.png" alt="Logotipo">
 				</div>
 			<div id="divBusca">
-  				<!-- <input type="text" id="txtBusca" placeholder="Buscar produtos..."/>
-                    <input type="submit" name="buscar" value="Buscar">-->
+  				<input type="text" id="txtBusca" placeholder="Buscar produtos..."/>
+  				<input type="submit" name="buscar" value="Buscar">
 			</div>
 			<nav id="menu">
-				<a href="index.php">INÍCIO</a>
+                                <a href="index.php">INÍCIO</a>
 				<a href="camisas.php">CAMISAS</a>
 				<a href="camisetas.php">CAMISETAS</a>
 				<a href="bermudas.php">BERMUDAS</a>
 				<a href="calca.php">CALÇA</a>	
 				<a href="shorts.php">SHORTS</a>
-				<a href="cadastrar.php">CADASTRAR</a>		
-
+				<a href="index.php">SAIR</a>
 			</nav>
-			</header>
-			<section>
-				<div class="camisas">
-					<h1 class="fonte"></h1>		
-					<figure class="camisa1">
-						<a href="bermudasarja.php"><img src="img/bermudas/bermuda1.jpg"></a>
-							
-					</figure>
-					<figure class="camisa2">
-						<a href="bermudasarja1.php"><img src="img/bermudas/bermuda2.jpg"></a>
-
-					</figure>
-					<figure class="camisa1">
-						<a href="bermudawalk.php"><img src="img/bermudas/bermuda3.jpg"></a>
-					</figure>
-					<figure class="camisa2">
-						<a href="bermudawalk1.php"><img src="img/bermudas/bermuda4.jpg"></a>
-					</figure>
-					<figure class="camisa1">
-						<a href="bermudachino.php"><img src="img/bermudas/bermuda5.jpg"></a>
-					</figure>
-				</div>
-			</section>
+                <fieldset>
+                    <legend>bem vindo,<?php echo $_SESSION['logado']."!";?></legend>
+                   
+                </fieldset>
+                    <form name="areadoaluno.php" method="POST" action="formalterardados_cliente.php">
+                <input  type="submit" name="editardados" value="Alterar Dados">
+                </form>
+                </header>	
 			<div>
 				<figure class="fpaypal">
 					<img src="img/paypalboleto/paypal.jpg">
 					<img src="img/paypalboleto/boletobancario.jpg">
 				</figure>
 			</div>
+			</section>
 			<aside>
 			<i>
 				  <p>The Outlet | CNPJ: 12.345.678/9101-12 • Av. Washington Luís, 541, zona 04, Caxias-RJ
@@ -492,4 +480,8 @@ h3 {
 	
 
 }
-</style>
+.testb{
+    margin: 10px;
+    padding: 2px;
+}
+                    </style>
